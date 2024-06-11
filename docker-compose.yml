@@ -1,0 +1,9 @@
+services:
+    kea:
+        image: jonasal/kea-dhcp4-ha:2.3.7
+        network_mode: "host"
+        volumes: 
+            - ./config:/kea/config
+        command: [-c /kea/config/dhcp4.json]
+              
+
